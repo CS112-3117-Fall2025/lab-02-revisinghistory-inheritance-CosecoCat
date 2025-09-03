@@ -6,19 +6,18 @@ public class RevisedHistoricalEvent extends HistoricalEvent {
 
     // INSTANCE VARIABLES //
 
-    private HistoricalEvent event;
     private String revisedDescription, citation;
 
     // CONSTRUCTORS //
 
     public RevisedHistoricalEvent() {
-        this.event = new HistoricalEvent();
+        super("No description", new Date());
         this.revisedDescription = "No description";
         this.citation = "No citation";
     }
 
     public RevisedHistoricalEvent(String description, Date eventDay, String revisedDescription, String citation) {
-        this.event = new HistoricalEvent(description, eventDay);
+        super(description, eventDay);
         this.revisedDescription = revisedDescription;
         this.citation = citation;
     }
@@ -33,7 +32,7 @@ public class RevisedHistoricalEvent extends HistoricalEvent {
 
         System.out.println("The following \"history\" was told for many years:");
         System.out.println();
-        System.out.printf("On %s: %s%n%n", event.getEventDay().toString(), event.getDescription());
+        System.out.printf("On %s: %s%n%n", super.getEventDay().toString(), super.getDescription());
 
         System.out.println(
                 "By correcting history, not just rewriting it, we are revisiting it to embark on the process of righting a wrong.\nHere is the revised history:");
