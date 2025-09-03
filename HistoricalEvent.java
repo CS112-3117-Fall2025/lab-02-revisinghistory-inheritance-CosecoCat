@@ -25,6 +25,14 @@ public class HistoricalEvent {
 
     // ACCESSORS //
 
+    public String getDescription() {
+        return description;
+    }
+
+    public Date getEventDay() {
+        return eventDay;
+    }
+
     // METHODS //
 
 }
