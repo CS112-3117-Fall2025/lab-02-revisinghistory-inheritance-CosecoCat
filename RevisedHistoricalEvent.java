@@ -1,6 +1,6 @@
 /*  RevisedHistoricalEvent
- * - description : String
- * - eventDay : Date
+ * - revisedDescription : String
+ * - citation : String
  */
 public class RevisedHistoricalEvent extends HistoricalEvent {
 
