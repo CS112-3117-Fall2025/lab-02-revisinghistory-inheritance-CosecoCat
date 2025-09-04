@@ -44,7 +44,8 @@ public class HistoricalEvent {
     // METHODS //
 
     public String toString() {
-        return getDescription() + ", " + getEventDay().toString();
+
+        return String.format("On %s: %s%n", getEventDay().toString(), getDescription());
     }
 
     public boolean equals(HistoricalEvent other) {
