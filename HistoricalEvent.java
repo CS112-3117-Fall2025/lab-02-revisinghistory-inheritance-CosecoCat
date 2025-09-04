@@ -12,16 +12,24 @@ public class HistoricalEvent {
     // CONSTRUCTORS //
 
     public HistoricalEvent() {
-        this.description = "No description";
-        this.eventDay = new Date(Date.DEFAULT_MONTH, Date.DEFAULT_DAY, Date.DEFAULT_YEAR);
+        setDescription("No description");
+        setEventDay(new Date());
     }
 
     public HistoricalEvent(String description, Date eventDay) {
-        this.description = description;
-        this.eventDay = eventDay;
+        setDescription(description);
+        setEventDay(eventDay);
     }
 
     // MUTATORS //
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setEventDay(Date eventDay) {
+        this.eventDay = eventDay;
+    }
 
     // ACCESSORS //
 
@@ -35,4 +43,14 @@ public class HistoricalEvent {
 
     // METHODS //
 
+    public String toString() {
+        return getDescription() + ", " + getEventDay().toString();
+    }
+
+    public boolean equals(HistoricalEvent other) {
+        if (this.description == other.description && this.eventDay == other.eventDay) {
+            return true;
+        }
+        return false;
+    }
 }
